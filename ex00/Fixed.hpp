@@ -17,18 +17,18 @@
 
 class Fixed
 {
-    private:
-        int _rawBits;
-        static const int _fractionnalBits = 8;
+	private:
+		int _rawBits;
+		static const int _fractionnalBits = 8;
 
-    public:
-        Fixed(); // constructeur par defaut
-        Fixed(const Fixed &copy); // constructeur de recopie
-        Fixed &operator=(const Fixed &other); // operateur d'affectation
-        ~Fixed(); // destructeur
+	public:
+		Fixed(); // constructeur par defaut
+		Fixed(const Fixed &copy); // constructeur de recopie
+		Fixed &operator=(const Fixed &other); // operateur d'affectation
+		~Fixed(); // destructeur
 
-        int getRawBits(void) const; // getter
-        void setRawBits(int const raw); // setter
+		int getRawBits(void) const; // getter
+		void setRawBits(int const raw); // setter
 };
 
 #endif

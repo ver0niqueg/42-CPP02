@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/11 15:28:07 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/11 17:32:50 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/11 18:48:27 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ Point::Point(Point const &copy) : _x(copy.getX()), _y(copy.getY())
 // operateur d'affectation
 Point &Point::operator=(const Point &other)
 {
-    (void)other;
-    return (*this);
+	(void)other;
+	return (*this);
 }
 
 // detructeur
@@ -41,11 +41,11 @@ Point::~Point()
 
 Fixed Point::getX(void) const
 {
-    return (this->_x);
+	return (this->_x);
 }
 
 Fixed Point::getY(void) const
 {
-    return (this->_y);
+	return (this->_y);
 }
 
