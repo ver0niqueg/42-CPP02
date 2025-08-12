@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/11 15:25:39 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/11 18:48:21 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/13 00:57:10 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,23 +28,20 @@ class Fixed
 		Fixed &operator=(const Fixed &other);
 		Fixed(const int intValue);
 		Fixed(const float floatValue);
-		// operateurs de comparaison
 		bool operator>(const Fixed &other) const;
 		bool operator<(const Fixed &other) const;
 		bool operator>=(const Fixed &other) const;
 		bool operator<=(const Fixed &other) const;
 		bool operator==(const Fixed &other) const;
 		bool operator!=(const Fixed &other) const;
-		// operateurs arithmetiques
 		Fixed operator+(const Fixed &other) const;
 		Fixed operator-(const Fixed &other) const;
 		Fixed operator*(const Fixed &other) const;
 		Fixed operator/(const Fixed &other) const;
-		// operateurs d'incrementation/decrementation pre et post
-		Fixed &operator++(void); // pre
-		Fixed operator++(int); // post
-		Fixed &operator--(void); // pre
-		Fixed operator--(int); // post
+		Fixed &operator++(void);
+		Fixed operator++(int);
+		Fixed &operator--(void);
+		Fixed operator--(int);
 		~Fixed();
 
 		int getRawBits(void) const;

@@ -6,23 +6,20 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/11 15:28:16 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/11 18:48:13 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/13 01:03:12 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Point.hpp"
 
-// Faire une fonction qui indique si un point donne est a l'interieur d'un triangle
-// Barycentric Subdivision Point Test
-// retourner True uniquement si le point est a l'interieur du triangle
+/* 
+1. calculer l'aire du triangle complet -> A
+2. calculer l'aire des trois triangles formes par point et deux sommets du triangle
+- si le point est a l'interieur A1 + A2 + A3 == A
+- aucune des aires ne doit etre nulle sinon il est sur un bord ou au sommet
+- sinon hors du triangle ou sur un bord
+*/
 
-// calculer l'aire du triangle complet -> A
-// calculer l4qire des trois triangles formes par point et deu sommets du triangle
-// si le point est a l4interieur A1 + A2 + A3 == A
-// aucune des aires ne doit etre nulle sinon il est sur un bord ou au sommet
-// sinon hors du triangle ou sur un bord
-
-// fonction pour calculer l'aire du triangle forme par trois points
 static Fixed calculateArea(Point const a, Point const b, Point const c)
 {
 	Fixed area = Fixed(0.5f) *

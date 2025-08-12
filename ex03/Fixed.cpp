@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/11 15:27:08 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/12 11:18:15 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/13 00:57:31 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ Fixed &Fixed::operator=(const Fixed &other)
 
 Fixed::Fixed(const int intValue)
 {
-	_rawBits = intValue << _fractionalBits; // decale l'entier vers la gauche de fractionalbits
+	_rawBits = intValue << _fractionalBits;
 }
 
 Fixed::Fixed(const float floatValue)
@@ -107,7 +107,6 @@ Fixed Fixed::operator/(const Fixed &other) const
 	return result;
 }
 
-//operateurs d'incremetation/decrementation
 Fixed &Fixed::operator++(void)
 {
 	this->_rawBits++;
@@ -116,8 +115,8 @@ Fixed &Fixed::operator++(void)
 
 Fixed Fixed::operator++(int)
 {
-	Fixed temp(*this); // on copie l'etat de l'objet
-	this->_rawBits++; // on incremente
+	Fixed temp(*this);
+	this->_rawBits++;
 	return(temp);
 }
 
