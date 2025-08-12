@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #ifndef FIXED_HPP
-# define FIXED_HPPP
+# define FIXED_HPP
 
 #include <iostream>
 
@@ -22,13 +22,12 @@ class Fixed
 		static const int _fractionalBits = 8;
 
 	public:
-		Fixed(); // constructeur par defaut
-		Fixed(const Fixed &copy); // constructeur de recopie
-		Fixed &operator=(const Fixed &other); // operateur d'affectation
-		~Fixed(); // destructeur
-
-		int getRawBits(void) const; // getter
-		void setRawBits(int const raw); // setter
+		Fixed();
+		Fixed(const Fixed &copy);
+		Fixed &operator=(const Fixed &other);
+		~Fixed();
+		int getRawBits(void) const;
+		void setRawBits(int const raw);
 };
 
 #endif

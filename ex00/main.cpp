@@ -14,11 +14,10 @@
 
 int main()
 {
-	Fixed a; // creer un objet par defaut
-	Fixed b(a); // creer un objet par copie
-	Fixed c; // creer un objet par defaut
+	Fixed a;
+	Fixed b(a);
+	Fixed c;
 
-	// attribu les valeurs de l'objet b a l'objet c et renvoie une ref vers cet objet c
 	c = b;
 
 	std::cout << a.getRawBits() << std::endl;
