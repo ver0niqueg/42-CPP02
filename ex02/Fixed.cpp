@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/11 14:35:20 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/11 18:47:59 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/12 18:57:15 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ Fixed &Fixed::operator=(const Fixed &other)
 
 Fixed::Fixed(const int intValue)
 {
-	_rawBits = intValue << _fractionalBits; // decale l'entier vers la gauche de fractionalbits
+	_rawBits = intValue << _fractionalBits;
 }
 
 Fixed::Fixed(const float floatValue)
@@ -47,7 +47,6 @@ int Fixed::toInt(void) const
 	return (this->_rawBits >>  _fractionalBits);
 }
 
-// operateurs de comparaisons
 bool Fixed::operator>(const Fixed &other) const
 {
 	return this->_rawBits > other._rawBits;
@@ -78,7 +77,6 @@ bool Fixed::operator!=(const Fixed &other) const
 	return this->_rawBits != other._rawBits;
 }
 
-// operateurs arithmetiques
 Fixed Fixed::operator+(const Fixed &other) const
 {
 	Fixed result;
@@ -107,7 +105,6 @@ Fixed Fixed::operator/(const Fixed &other) const
 	return result;
 }
 
-//operateurs d'incremetation/decrementation
 Fixed &Fixed::operator++(void)
 {
 	this->_rawBits++;
@@ -116,8 +113,8 @@ Fixed &Fixed::operator++(void)
 
 Fixed Fixed::operator++(int)
 {
-	Fixed temp(*this); // on copie l'etat de l'objet
-	this->_rawBits++; // on incremente
+	Fixed temp(*this);
+	this->_rawBits++;
 	return(temp);
 }
 
