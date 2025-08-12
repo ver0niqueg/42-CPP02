@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/11 13:13:29 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/11 18:47:46 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/12 17:45:22 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ Fixed &Fixed::operator=(const Fixed &other)
 Fixed::Fixed(const int intValue)
 {
 	std::cout << "Int constructor called" << std::endl;
-	_rawBits = intValue << _fractionalBits; // decale l'entier vers la gauche de fractionalbits
+	_rawBits = intValue << _fractionalBits;
 }
 
 Fixed::Fixed(const float floatValue)
@@ -55,7 +55,7 @@ float Fixed::toFloat(void) const
 
 int Fixed::toInt(void) const
 {
-	return (this->_rawBits >>  _fractionalBits);
+	return (this->_rawBits >> _fractionalBits);
 }
 
 int Fixed::getRawBits(void) const
@@ -70,7 +70,7 @@ void Fixed::setRawBits(int const raw)
 
 std::ostream &operator<<(std::ostream &o, const Fixed &value)
 {
-	o << value.toFloat(); // on affiche la valeur en float
-	return o; // on retourne le flux pour pouvoir chainer les <<
+	o << value.toFloat();
+	return o;
 }
 

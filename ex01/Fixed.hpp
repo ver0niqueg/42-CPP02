@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/11 13:13:27 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/11 18:47:51 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/12 15:42:24 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,18 +23,18 @@ class Fixed
 		static const int _fractionalBits = 8;
 
 	public:
-		Fixed(); // constructeur par defaut
-		Fixed(const Fixed &copy); // constructeur de recopie
-		Fixed &operator=(const Fixed &other); // surcharge operateur d'affectation
+		Fixed();
+		Fixed(const Fixed &copy);
+		Fixed &operator=(const Fixed &other);
 		Fixed(const int intValue);
 		Fixed(const float floatValue);
-		~Fixed(); // destructeur
+		~Fixed();
 
-		int getRawBits(void) const; // getter
-		void setRawBits(int const raw); // setter
+		int getRawBits(void) const;
+		void setRawBits(int const raw);
 
-		float toFloat(void) const; // convertit la valeur en virgule fixe en nb a virgule flottante
-		int toInt(void) const; // convertit la valeur en virgule fixe en nb entier
+		float toFloat(void) const;
+		int toInt(void) const;
 };
 
 std::ostream &operator<<(std::ostream &o, const Fixed &value);
